@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Accessible Web Design and Development course information.">
+  <title>Registration | WEBLAB Course Hub</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html">WEB<span>LAB</span> · Course Hub</a>
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="index.html" >Home</a></li>
+        <li><a href="staff.html" >Staff</a></li>
+        <li><a href="schedule.html" >Schedule</a></li>
+        <li><a href="register.html" aria-current="page">Register</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+
+<main id="main" class="panel">
+  <p class="eyebrow">Join the course</p>
+  <h1>Course registration</h1>
+  <p class="muted">Complete the sample form below. Required fields are marked and explained with clear labels.</p>
+  <form action="#" method="get">
+    <fieldset>
+      <legend>Student details</legend>
+      <div class="form-grid">
+        <div class="field"><label for="full-name">Full name *</label><input id="full-name" name="fullName" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="student-id">Student number *</label><input id="student-id" name="studentId" type="text" pattern="[A-Za-z0-9-]{4,12}" title="Use 4 to 12 letters, numbers, or hyphens." required></div>
+        <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="start-date">Preferred start date</label><input id="start-date" name="startDate" type="date"></div>
+        <div class="field"><label for="website">Portfolio URL (optional)</label><input id="website" name="website" type="url" placeholder="https://example.com"></div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>Course preferences</legend>
+      <div class="form-grid">
+        <div class="field"><label for="study-mode">Study mode *</label>
+          <select id="study-mode" name="studyMode" required>
+            <option value="">Choose an option</option><option value="on-campus">On campus</option><option value="online">Online</option><option value="hybrid">Hybrid</option>
+          </select>
+        </div>
+        <div class="field"><label for="experience">Previous web experience</label><input id="experience" name="experience" type="number" min="0" max="10" value="0"></div>
+      </div>
+      <p><strong>Preferred contact method</strong></p>
+      <div class="choice"><input id="contact-email" name="contactMethod" type="radio" value="email" checked><label for="contact-email">Email</label></div>
+      <div class="choice"><input id="contact-phone" name="contactMethod" type="radio" value="phone"><label for="contact-phone">Phone</label></div>
+      <div class="choice"><input id="updates" name="updates" type="checkbox" value="yes"><label for="updates">Send me course announcements</label></div>
+    </fieldset>
+    <fieldset>
+      <legend>Additional information</legend>
+      <div class="field"><label for="message">Anything the teaching team should know?</label><textarea id="message" name="message" rows="4" maxlength="500"></textarea></div>
+      <div class="field"><label for="attachment">Supporting document (optional)</label><input id="attachment" name="attachment" type="file" accept=".pdf,.doc,.docx"></div>
+    </fieldset>
+    <div class="actions">
+      <button class="button" type="submit">Submit registration</button>
+      <button class="button secondary" type="reset">Reset form</button>
+      <button class="button secondary" type="button" onclick="alert('This is a demo form. No information has been sent to a server.')">Form information</button>
+    </div>
+    <p class="muted">Demo only: this static project does not send or store registration data. The form demonstrates accessible HTML controls and browser validation.</p>
+  </form>
+</main>
+
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <span>WEBLAB · Web Design &amp; Development</span>
+    <span><a href="mailto:course@example.edu">Email the course team</a> · <a href="#main">Back to content</a></span>
+  </div>
+</footer>
+
+</body>
+</html>
